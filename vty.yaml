@@ -16,7 +16,7 @@
      ios_config:
        parents: line vty 0 4
        lines:
-        - access-group VTY in
+        - access-class VTY in
         
    - name: SHOW ACL 
      ios_command:
