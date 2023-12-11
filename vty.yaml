@@ -15,5 +15,5 @@
    - name: SHOW ACL 
      ios_command:
        commands:
-         - show acess-lists
+         - show access-lists
      register: output
