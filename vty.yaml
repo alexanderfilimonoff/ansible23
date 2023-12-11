@@ -1,0 +1,19 @@
+---
+- name: CONFIGURE VTY
+  hosts: R1
+  gather_facts: false
+  connection: local
+
+  tasks:
+   - name: Create ACL
+     ios_config:
+       parents: ip access-list standard VTY
+       lines:
+        - permit 192.168.10.10
+        - permit 192.168.20.20
+
+   - name: SHOW ACL 
+     ios_command:
+       commands:
+         - show acess-lists
+     register: output
