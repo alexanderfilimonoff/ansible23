@@ -24,8 +24,8 @@
          - show access-lists
      register: output
      
-     - name: Print result
-       debug:
-        var: result.stdout_lines
+   - name: Print result
+     debug:
+       var: result.stdout_lines
      tags: show
 
