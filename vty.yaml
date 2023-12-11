@@ -11,7 +11,13 @@
        lines:
         - permit 192.168.10.10
         - permit 192.168.20.20
-
+        
+   - name: Apply ACL
+     ios_config:
+       parents: line vty 0 4
+       lines:
+        - access-group VTY in
+        
    - name: SHOW ACL 
      ios_command:
        commands:
