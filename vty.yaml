@@ -22,7 +22,7 @@
      ios_command:
        commands:
          - show access-lists
-     register: output
+     register: result
      
    - name: Print result
      debug:
